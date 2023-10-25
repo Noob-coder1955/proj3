@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("https://wallpapers.com/images/hd/hacker-kali-linux-binary-codes-ktlqxp9ycsv2irnx.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: courier;
+            color: aqua;
+            font-size: 17px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Registration Form</h1>
+<form method="post" action="secure.html" id="registrationForm">
+    <label for="full_name">Full Name:</label>
+    <input type="text" id="full_name" name="full_name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd" required><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" id="male" value="Male"> <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="Female"> <label for="female">Female</label><br><br>
+
+    <label for="phone">Enter a phone number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="9xxxxxxxx7" required><br><br>
+
+    <label for="competition_category">Competition Category:</label><br>
+    <input type="checkbox" id="category1" name="competition_category[]" value="category1">
+    <label for="category1">CODE YOUR WAY</label><br>
+    <input type="checkbox" id="category2" name="competition_category[]" value="category2">
+    <label for="category2">HACK THE BOX</label><br>
+    <input type="checkbox" id="category3" name="competition_category[]" value="category3">
+    <label for="category3">DISRUPTIVE FUTURE</label><br><br>
+    
+    <div style="display: none;">
+        <label for="honeypot">Leave this field empty:</label>
+        <input type="text" id="honeypot" name="honeypot">
+    </div>
+    
+    <label for="security_question">What is your school Name?</label>
+    <input type="text" id="security_question" name="security_question" required><br><br>
+    
+    <input type="submit" style="height: 30px; background-color: aqua; font-weight: bolder; text-transform: uppercase;" value="Submit">
+</form>
+
+<script>
+    const registrationForm = document.getElementById("registrationForm");
+
+    registrationForm.addEventListener("submit", function (e) {
+        const fullName = document.getElementById("full_name").value;
+        const email = document.getElementById("email").value;
+        const dob = document.getElementById("dob").value;
+        const password = document.getElementById("pwd").value;
+        const age = document.getElementById("age").value;
+        const phone = document.getElementById("phone").value;
+        const securityQuestion = document.getElementById("security_question").value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const categories = document.querySelectorAll('input[name="competition_category[]"]:checked');
+
+        if (!fullName || !email || !dob || !password || !age || !phone || !securityQuestion || !gender || categories.length === 0) {
+            e.preventDefault();
+            alert("Please fill in all required fields and select at least one competition category.");
+        }
+    });
+</script>
+
+
+<!-- Add the button for navigating to another page -->
+<a href="secure.html" style="text-decoration: none;">
+    <button style="height: 30px; background-color: aqua; font-weight: bolder; text-transform: uppercase;">check captcha</button>
+</a>
+</body>
+</html>

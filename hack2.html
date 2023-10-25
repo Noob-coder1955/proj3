@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylw.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Hack the Box! - Cyberscape_2o23</title>
+</head>
+<body class="ha">
+    <h1 class="v1">HACK THE BOX:</h1>
+    <div class="head">
+        <p>Join the Ultimate Cybersecurity Challenge: Capture The Flag (CTF) 2023!
+
+            Welcome to Capture The Flag (CTF) 2023  the most exhilarating cybersecurity competition of the year!<br> Get ready to put your hacking skills to the test in a series of challenges designed to challenge your problem-solving abilities, technical prowess, and teamwork. <br>Whether you're a seasoned cybersecurity professional, a student aspiring to enter the field, or simply curious about hacking techniques, this event is your chance to shine.
+            
+            <br>Event Highlights:
+            
+            <br> Diverse Challenges: Engage in a variety of challenges covering areas such as cryptography, web exploitation, reverse engineering, forensics, and more.<br> Each challenge is designed to simulate real-world scenarios, giving you a taste of what it's like to tackle actual cybersecurity threats.
+            
+            <br>Skill Levels: Whether you're a beginner or an advanced hacker, we've got challenges suited to your skill level.<br> Newcomers can learn the ropes and sharpen their skills, while experts can test their mettle against complex puzzles.
+            
+            <br> Team Collaboration: Form a team of like-minded individuals or join forces with fellow participants to collaborate, strategize, and conquer challenges together. CTF is not just about individual brilliance; it's about teamwork and camaraderie.</p></div>
+    </div>
+    <div class="cal">
+        <p> &#128197; Date: 1/10/2023<br>
+            &#9200; Time: 9:30-1:00 Pm<br>
+            &#128205;  Location: SHIELD LAB<br></p>
+    </div>
+    <div class="f1">
+        <a href="rsa.html" id="registerLink">Encrypt Now!</a>
+    </div>
+
+    <script>
+        // JavaScript for mouse events
+        const registerLink = document.getElementById("registerLink");
+        const head = document.querySelector(".head");
+        const cal = document.querySelector(".cal");
+
+        // Mouseover event for .head
+        head.addEventListener("mouseover", function() {
+            head.style.backgroundColor = "lightgray"; // Change background color on hover
+        });
+
+        // Mouseout event for .head
+        head.addEventListener("mouseout", function() {
+            head.style.backgroundColor = "transparent"; // Reset background color on mouseout
+        });
+
+        // Contextmenu event for .head
+        head.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            alert("Right-clicking is disabled on this section.");
+        });
+
+        // Mouseenter event for .cal
+        cal.addEventListener("mouseenter", function() {
+            cal.style.border = "2px solid blue"; // Add a blue border when the mouse enters
+        });
+
+        // Mouseleave event for .cal
+        cal.addEventListener("mouseleave", function() {
+            cal.style.border = "none"; // Remove the border when the mouse leaves
+        });
+
+        // Mouseover event for "REGISTER NOW!" link
+        registerLink.addEventListener("mouseover", function() {
+            registerLink.style.backgroundColor = "red"; // Change background color on hover
+        });
+
+        // Mouseout event for "REGISTER NOW!" link
+        registerLink.addEventListener("mouseout", function() {
+            registerLink.style.backgroundColor = "transparent"; // Reset background color on mouseout
+        });
+
+        // Click event for "REGISTER NOW!" link (opens form.html)
+        registerLink.addEventListener("click", function() {
+            window.location.href = registerLink.getAttribute("href");
+        });
+
+        // Mousemove event (change text color)
+        document.addEventListener("mousemove", function(event) {
+            document.body.style.color = "blue"; // Change text color when moving the mouse
+        });
+
+        // Contextmenu event (right-click)
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            alert("Right-clicking is disabled on this page.");
+        });
+
+        // Double-click event for "REGISTER NOW!" link
+        registerLink.addEventListener("dblclick", function() {
+            alert("You double-clicked the 'REGISTER NOW!' link.");
+        });
+
+        // Mouse down event for "REGISTER NOW!" link
+        registerLink.addEventListener("mousedown", function() {
+            registerLink.style.fontSize = "20px"; // Increase font size when the mouse button is pressed
+        });
+
+        // Mouse up event for "REGISTER NOW!" link
+        registerLink.addEventListener("mouseup", function() {
+            registerLink.style.fontSize = "16px"; // Reset font size when the mouse button is released
+        });
+
+        // Mouseenter event for "REGISTER NOW!" link
+        registerLink.addEventListener("mouseenter", function() {
+            registerLink.style.border = "2px solid green"; // Add a green border when the mouse enters
+        });
+
+        // Mouseleave event for "REGISTER NOW!" link
+        registerLink.addEventListener("mouseleave", function() {
+            registerLink.style.border = "none"; // Remove the border when the mouse leaves
+        });
+    </script>
+</body>
+</html>
